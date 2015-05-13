@@ -1,0 +1,1 @@
+C:\Root\Cloud\David\StockTicker\XNAStockTicker\XNAStockTickerContent\obj\x86\Debug\XNAStockTickerContent.contentprojResolveAssemblyReference.cache
