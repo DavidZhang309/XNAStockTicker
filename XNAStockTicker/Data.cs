@@ -10,21 +10,21 @@ namespace XNAStockTicker
         public float Price { get; set; }
         public float Change { get; set; }
 
-        public static bool VerifyUsefulness(string stockSymbol)
-        {
-            string[] data = stockSymbol.Split('.');
-            return !(data.Length >= 3);
-        }
-
-        public static Stock[] LoadStocks()
+        /// <summary>
+        /// Loads Stocks from text file. Format of each line is following:
+        /// TICKER\tNAME
+        /// where \t is a tab character seperating the ticker symbol and name
+        /// </summary>
+        /// <param name="stockFile"></param>
+        /// <returns></returns>
+        public static Stock[] LoadStocks(string stockFile)
         {
             List<Stock> stocks = new List<Stock>();
-            string[] lines = File.ReadAllLines("TSX.txt");
+            string[] lines = File.ReadAllLines(stockFile);
             for (int i = 0; i < lines.Length; i++)
             {
                 string[] data = lines[i].Split('\t');
-                if (VerifyUsefulness(data[0]))
-                    stocks.Add(new Stock() { Symbol = data[0], Name = data[1] });
+                stocks.Add(new Stock() { Symbol = data[0], Name = data[1] });
             }
             return stocks.ToArray();
         }

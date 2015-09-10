@@ -45,18 +45,20 @@ namespace XNAStockTicker
                     if (StockGone != null) StockGone(this, new EventArgs());
                     continue;
                 }
-                if (stock.Price == -1)
-                {
-                    batch.DrawString(SymFont, stock.Symbol, new Vector2(x, 0), Color.Gray);
-                    batch.DrawString(NumFont, stock.Price.ToString(), new Vector2(x + symBound.X + 5, 0), Color.Gray);
-                    batch.DrawString(NumFont, Math.Abs(stock.Change).ToString(), new Vector2(x + symBound.X + priceBound.X + 10, 0), Color.Gray);
-                }
-                else
-                {
-                    batch.DrawString(SymFont, stock.Symbol, new Vector2(x, 0), Color.Black);
-                    batch.DrawString(NumFont, stock.Price.ToString(), new Vector2(x + symBound.X + 5, 0), Color.Black);
-                    batch.DrawString(NumFont, Math.Abs(stock.Change).ToString(), new Vector2(x + symBound.X + priceBound.X + 10, 0), stock.Change == 0 ? Color.Gray : (stock.Change > 0 ? Color.Green : Color.Red));
-                }
+
+                Color symColor = stock.Price == -1 ? Color.Gray : Color.Black;
+                Color priceColor = stock.Price == -1 ? Color.Gray : Color.Black;
+                Color changeColor = Color.Gray;
+                if (stock.Price != -1)
+                    changeColor = stock.Change == 0 ? Color.Gray : (stock.Change > 0 ? Color.Green : Color.Red);
+
+                Vector2 position = new Vector2(x, 0);
+                batch.DrawString(SymFont, stock.Symbol, position, symColor);
+                position.X += symBound.X + 5;
+                batch.DrawString(NumFont, stock.Price.ToString(), position, priceColor);
+                position.X += priceBound.X + 5;
+                batch.DrawString(NumFont, Math.Abs(stock.Change).ToString(), position, changeColor);
+
                 currentStock++;
                 if (currentStock == Stocks.Length) currentStock = 0;
                 x += ticklength;

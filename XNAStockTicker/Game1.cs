@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Windows.Forms;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+
 
 namespace XNAStockTicker
 {
@@ -13,6 +15,8 @@ namespace XNAStockTicker
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        const string CFGFILE = "init.cfg";
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -28,8 +32,15 @@ namespace XNAStockTicker
                 };
             Content.RootDirectory = "Content";
 
+            if (!File.Exists(CFGFILE))
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.ShowDialog();
+                File.WriteAllText(CFGFILE, dialog.FileName);
+            }
+
             display = new StockDisplay() { Resolution = new Point(1366, 100) };
-            display.Stocks = Stock.LoadStocks();
+            display.Stocks = Stock.LoadStocks(File.ReadAllText(CFGFILE));
             display.StockGone += new EventHandler<EventArgs>(display_StockGone);
 
             updater = new StockUpdater();
@@ -88,7 +99,6 @@ namespace XNAStockTicker
             // TODO: Add your update logic here
             updater.Update();
             base.Update(gameTime);
-
         }
 
         /// <summary>

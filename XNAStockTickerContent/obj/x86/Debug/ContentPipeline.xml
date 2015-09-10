@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Root\Cloud\David\StockTicker\XNAStockTicker\XNAStockTicker\bin\x86\Debug\Content\TickerNum.xnb</Output>
-      <Time>2015-05-12T23:18:02.7211219-04:00</Time>
+      <Output>C:\Cloud\David\Github\XNAStockTicker\XNAStockTicker\bin\x86\Debug\Content\TickerNum.xnb</Output>
+      <Time>2015-09-10T13:22:20.9112596-04:00</Time>
     </Item>
     <Item>
       <Source>TickerSymbol.spritefont</Source>
@@ -16,8 +16,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Root\Cloud\David\StockTicker\XNAStockTicker\XNAStockTicker\bin\x86\Debug\Content\TickerSymbol.xnb</Output>
-      <Time>2015-05-12T23:18:03.5649358-04:00</Time>
+      <Output>C:\Cloud\David\Github\XNAStockTicker\XNAStockTicker\bin\x86\Debug\Content\TickerSymbol.xnb</Output>
+      <Time>2015-09-10T13:22:20.9267706-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -25,10 +25,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Root\Cloud\David\StockTicker\XNAStockTicker\XNAStockTickerContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Root\Cloud\David\StockTicker\XNAStockTicker\XNAStockTicker\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Root\Cloud\David\StockTicker\XNAStockTicker\XNAStockTickerContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Root\Cloud\David\StockTicker\XNAStockTicker\XNAStockTicker\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Cloud\David\Github\XNAStockTicker\XNAStockTickerContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Cloud\David\Github\XNAStockTicker\XNAStockTicker\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Cloud\David\Github\XNAStockTicker\XNAStockTickerContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Cloud\David\Github\XNAStockTicker\XNAStockTicker\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -56,8 +56,8 @@
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-04-20T02:23:25.9784148-04:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-07-30T22:34:48.3003162-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
